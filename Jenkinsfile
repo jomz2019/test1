@@ -12,7 +12,6 @@ pipeline {
         }
         stage('Build') {
 			steps {
-				bat 'docker image rm debangj/test1:lts || exit code;'
 				bat 'docker build -t debangj/test1:lts .'
 			}
 		}
