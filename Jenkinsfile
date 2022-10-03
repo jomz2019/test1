@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Build') {
 			steps {
-				bat 'docker image rm debangj/test1:lts || true'
+				bat 'docker image rm debangj/test1:lts 2>/dev/null'
 				bat 'docker build -t debangj/test1:lts .'
 			}
 		}
